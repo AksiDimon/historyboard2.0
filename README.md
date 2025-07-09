@@ -1,7 +1,7 @@
 # HistoryBoard
 
 > 🚀 **GitHub Pages (gh-pages) deployed** — просмотрите демо по адресу:  
-> **https://aksidimon.github.io/historyBoard/**
+> **https://aksidimon.github.io/historyboard2.0/**
 
 ---
 **HistoryBoard** — независимый React-компонент, который отображает временные отрезки в виде точек по окружности и помогает интерактивно просматривать ключевые события каждого периода.
@@ -24,7 +24,7 @@
 ## 🛠️ Установка
 
 ```bash
-git clone https://aksidimon.github.io/historyboard2.0/
+git clone https://github.com/your-org/historyBoard.git
 cd historyBoard
 npm install
 # или
