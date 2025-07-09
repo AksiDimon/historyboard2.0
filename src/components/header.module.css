@@ -1,0 +1,317 @@
+*{
+    box-sizing: border-box;
+    /* width: 100%; */
+    margin: 0;
+      font-family: PT Sans;
+      color: #42567A;
+       user-select: none; /* запрещает выделять текст на странице*/
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top:16.389vh;
+    left: 16.667vw;
+    width: 23.385vw;
+    height: 11.111vh;
+    /* border: 1px solid black; */
+}
+
+.vertLine{
+ width: 0.417vw;
+height: 10.111vh;
+border: 1px solid black;
+background: linear-gradient( #3877EE, #EF5DA8);
+/* border-image-source: linear-gradient(180deg, #3877EE -5%, #EF5DA8 85%); */
+}
+
+
+.nameTitle {
+ width: 18.385vw;
+height: 11.111vh;
+font-family: PT Sans;
+font-weight: 700;
+font-size: calc(1.917vw + 1vh);
+color: #42567A;
+}
+
+.yearContainer {
+    position: absolute;
+    width: 50.677vw;
+    height: 14.815vh;
+    top: 37.037vh;
+    left: 28.969vw;
+    /* border: 1px solid black; */
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    font-size: 
+    calc(5.667vw + 5.667vh)
+    /* clamp(50px, 5vmin, 200px ) */
+    ;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+/* _______ Lines _____*/
+
+.verticalLines {
+    position: absolute;
+    width: 75vw;
+    height: 100vh;
+    left: 16.667vw;
+    border-left: 1px solid #42567a21;
+    border-right: 1px solid  #42567a21;
+
+}
+
+.horisontalLineCenter {
+    position: absolute;
+    top: 44.444vh;
+    left: 16.667vw;
+    width: 75vw;
+    border-bottom: 1px solid #42567a21;
+}
+
+.verticalLineCenter {
+    position: absolute;
+    height: 100vh;
+    left: 54.167vw;
+    border-left: 1px solid #42567a21;
+}
+
+/*------------- Foooter*/
+
+.sliderViewport {
+  position: relative;
+  width: 63vw;           /* ширина “окна” */
+  left: 22.5vw;          /* как у вас сейчас */
+  top: 80vh;
+  overflow-x: hidden;    /* прячет всё, что выходит за пределы */
+  /* либо overflow-x: auto, если хотите скроллить мышкой */
+  scroll-behavior: smooth; /* для плавного скролла при JS scrollTo */
+
+  cursor: grab;
+  z-index: 10;
+}
+
+.sliderViewport:active {
+    cursor: grab;
+}
+.sliderTrack {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.containerHistory {
+    flex: 0 0 63vw;
+    display: flex;
+    justify-content: space-between;
+    /* width: 63vw;
+    top: 80vh;
+    left: 22.5vw; */
+
+}
+.blockDiscriptionHistory {
+    /* border: 1px solid #42567a21; */
+    width: 16.667vw;
+    height: min-content;
+      user-select: none;
+}
+
+/* ------buttonComp----*/
+.buttonsContainer {
+    position: absolute;
+    top: 64.537vh;
+    left: 20.833vw;
+    width: 6.25vw;
+    height: 8.148vh;
+    /* border: 1px solid black; */
+}
+.countContainer {
+    font-size: 1.1vw;
+    margin: 0.2rem;
+
+}
+.buttonsWithCount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.button{
+    position: relative;
+    width: 2.604dvw;
+    height: 4.63dvh;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: none;
+    border: 1px solid #42567A80;
+    transition: border-color 0.2s;
+
+}
+.button:hover{
+    border-color: #42567A;
+
+}
+
+.arrow {
+    position: absolute;
+
+    left: 50%;
+    /* position: relative; */
+    /* transform: translate(-50%, -50%); */
+    width: 0.726vw;
+    height: 0.757vw;
+    border-left: 1.9px solid #42567A80;
+    border-top: 1.9px solid #42567A80 ;
+    transition: border-color 0.2s;
+}
+
+/* .arrow:hover {
+    border-left: 1.9px solid #42567A;
+    border-top: 1.9px solid #42567A ;
+} */
+.button:hover .arrow {
+  border-color: #42567A;
+}
+
+
+/*------ */
+.bntFooterButton{
+    position: absolute;
+    top: 84.667vh;
+    left: 19vw;
+    width: 70vw;
+    height: fit-content;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+/*--------- Circle -----*/
+
+/* .circle {
+    position: absolute;
+    top: 19.907vh;
+    left: 40.208vw;
+    width: 27.917vw;
+    height: 49.074vh;
+    border: 1px solid black;
+    border-radius: 50%;
+} */
+
+.cercleParent{
+  position: absolute;     
+  /* top: 19.907vh; left: 40.208vw;
+  width: 27.604vw;
+  height: 49.074vh; */
+  top: 0;
+  left: 9vw;
+  right: 0vw;      /* ← вместо width:100vw */
+  height: 89vh;
+/* transform: translate(3.8vw, 0vh); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  --containerWidth: 27.917vw;
+  --containerHight: 49.074vh;
+
+  width: var(--containerWidth);
+  height: var(--containerWidth);
+  border-radius: 50%;
+  border: #42567A 1px solid;
+  position: relative;
+  /* margin: 100px auto; */
+  transition: transform var(--transitionDuration) ease-in-out;
+}
+
+.nameDot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max-content;
+  white-space: nowrap;
+
+  /* отменяем то, что делает .dot */
+  transform:
+    translate(-50%, -50%)
+    /* выталкиваем чуть дальше, чтобы текст не наслаивался на точку: */
+    translateY(calc(-1 * var(--containerWidth) / 20 - var(--pointWidth)))
+    /* контр-повороты: сначала --degree, потом 45° */
+    rotate(calc(var(--degree) * -1deg))
+    rotate(135deg);
+  transition: all var(--transitionDuration) ease-in-out;
+  opacity: 0;                 /* скрываем по умолчанию */
+  pointer-events: none;       /* чтобы не мешал кликам */
+
+  font-weight: 700;
+  color: #42567A;
+  font-family: PT Sans;
+  font-size: calc(1.042vw + 0.5vh);
+}
+.nameDot:hover {
+      --pointWidth: 20px;
+  /* background: rgba(33, 171, 193, 0.149); */
+  background: none;
+  border: #42567A 1px solid;
+
+}
+
+.dot {
+  /* 1) базовый размер точки */
+  --pointWidth: 10px;
+  width: var(--pointWidth);
+  height: var(--pointWidth);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+ 
+
+  /* 2) поворот по углу и сдвиг к периметру */
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg)
+    rotate(calc(var(--degree) * 1deg))
+    translateY(calc(-1 * var(--containerWidth) / 2));
+
+  background: #42567A;
+  border-radius: 50%;
+  transition: all var(--transitionDuration) ease-in-out;
+  z-index: 10;
+}
+
+
+.dot:hover {
+  --pointWidth: 80px;
+  /* background: rgba(33, 171, 193, 0.149); */
+  background: none;
+  border: #42567A 1px solid;
+}
+.dot:hover .nameDot {
+  opacity: 1;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  /* компенсируем наклон цифры */
+  transform: rotate(calc(var(--degree) * -1deg)) rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0rem;
+}
+
+.inner:hover{
+font-size: 2rem;
+}
