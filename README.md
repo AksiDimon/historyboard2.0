@@ -24,7 +24,7 @@
 ## 🛠️ Установка
 
 ```bash
-git clone https://github.com/your-org/historyBoard.git
+git clone https://aksidimon.github.io/historyboard2.0/
 cd historyBoard
 npm install
 # или
